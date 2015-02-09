@@ -2,6 +2,67 @@ body {
 	background-color: #000;
 }
 
+header {
+  width: 100%;
+  background-color: #fff;
+  height: auto;
+  overflow: auto;
+  margin: 0 auto;
+
+}
+
+footer {
+  width: 100%;
+  margin-top: 1%;
+  background-color: #ffffff;
+  height: auto;
+  overflow: auto;
+}
+
+footer p {
+  padding: 1%;
+  font-size: .85em;
+}
+
+.footer-nav {
+  float: left;
+}
+
+.footer-nav ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 1%;
+  list-style: none;
+}
+
+.footer-nav ul li {
+  
+  padding: 1%;
+  font: .85em/.95em sans-serif;
+  display: inline-block;
+  background: #fff;
+}
+
+.copyright {
+  width: 30%;
+  float: left;
+}
+ 
+.site {
+  float: right;
+  clear: none;
+
+}
+
+.logo {
+  width: 25%;
+  float: left;
+  margin: -1% 0 0 1%;
+  position: relative;
+
+}
+
 #randomize {
 	width: 100%;
 	background-color: #000;
@@ -9,7 +70,10 @@ body {
 	margin-top: 1%;
 	z-index: 1;
 }
-
+ .container {
+  width: 95%; 
+  margin: 0 auto;
+ }
 /* ====== NAVIGATION BAR ====== */
 .sticky {
 	position: fixed;
@@ -23,12 +87,14 @@ body {
 
 
 nav {
-	width: 100%;
+	width: 50%;
 	height: 20%;
 	background-color: #fff;
-	padding: 5px;
+	padding: 3px;
 	z-index: 2000;
-	top: 0;
+  position: relative;
+	float: right;
+  margin: -5.5% auto;
 }
 
 ul {
@@ -90,4 +156,16 @@ a {
 
 a:hover {
 	color: #666;
+}
+
+@media screen and (min-width: 0px) and (max-width: 760px) {
+
+#container {
+  width: 100%;
+}
+
+.logo {
+  width: 90%;
+  margin: 0 auto;
+}
 }
