@@ -1,13 +1,21 @@
-body {
-	background-color: #000;
+
+
+html, body {
+  
+  width: 100%;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:800,400|Lusitana);
 
 header {
   width: 100%;
-  background-color: #fff;
-  height: auto;
+  background-color: rgba(0, 0, 0, 1);
+  height: 15%;
+
   overflow: auto;
-  margin: 0 auto;
+  margin: -1% auto;
+  position: fixed;
+  z-index: 1500;
 
 }
 
@@ -16,7 +24,8 @@ footer {
   margin-top: 1%;
   background-color: #ffffff;
   height: auto;
-  overflow: auto;
+  overflow: none;
+
 }
 
 footer p {
@@ -24,80 +33,100 @@ footer p {
   font-size: .85em;
 }
 
-.footer-nav {
-  float: left;
-}
 
-.footer-nav ul {
-  text-align: left;
-  display: inline;
-  margin: 0;
-  padding: 1%;
-  list-style: none;
-}
 
-.footer-nav ul li {
-  
-  padding: 1%;
-  font: .85em/.95em sans-serif;
-  display: inline-block;
-  background: #fff;
-}
 
 .copyright {
   width: 30%;
-  float: left;
+  float: right;
 }
  
 .site {
+  width: 30%;
   float: right;
-  clear: none;
+ 
 
 }
 
 .logo {
-  width: 25%;
+  width: 30%;
   float: left;
-  margin: -1% 0 0 1%;
+  margin: .5% 0 0 2%;
   position: relative;
 
 }
 
 #randomize {
 	width: 100%;
-	background-color: #000;
+	background-color: #fff;
 	margin: auto;
-	margin-top: 1%;
+	margin-top: 0;
 	z-index: 1;
 }
- .container {
-  width: 95%; 
-  margin: 0 auto;
+
+.side-nav {
+  width: 15%;
+  float: left;
+  margin: 8% 2% 0 2%;
+  background-color: #ffffff;
+  height: 90%;
+  font-size: 120%;
+  font-family: "Raleway";
+  font-weight: 800;
+  line-height: 75%;
+  position: fixed;
+}
+
+ button {
+  background-color: #ffffff;
+  border: none;
+  display: block;
+ } 
+
+ button a {
+  color: rgba(0,0,0,1);
  }
-/* ====== NAVIGATION BAR ====== */
-.sticky {
-	position: fixed;
-	width: 100%;
-	left: 0;
-	top: 0;
-	z-index: 100;
-	border-top: 0;
+
+ p.caps {
+  text-transform: uppercase;
+
+ }
+
+button:hover {
+  color: #c4c4c4;
+}
+
+ #Container {
+  width: 80%; 
+  float: right;
+  margin: 10% 3% 2% 0;
+  position: relative;
 }
 
 
 
-nav {
+ 
+/* ====== NAVIGATION BAR ====== */
+
+
+
+.main-nav {
+  font: 150% "Raleway";
+  font-weight: 800;
 	width: 50%;
 	height: 20%;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0);
 	padding: 3px;
 	z-index: 2000;
-  position: relative;
+  position: fixed;
 	float: right;
-  margin: -5.5% auto;
+  top: 3%;
+  right: -7%;
+ 
+
 }
 
-ul {
+.main-nav ul {
   text-align: left;
   display: inline;
   margin: 0;
@@ -105,13 +134,12 @@ ul {
   list-style: none;
 
 }
-ul li {
-  font: bold 18px/22px sans-serif;
+.main-nav ul li {
   display: inline-block;
-  margin-right: -4px;
+  margin-right: 0;
   position: relative;
   padding: 15px 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -120,7 +148,7 @@ ul li {
   transition: all 0.2s;
 }
 
-ul li ul {
+.main-nav ul li ul {
   padding: 0;
   position: absolute;
   top: 48px;
@@ -135,32 +163,41 @@ ul li ul {
   -o-transition: opacity 0.2s;
   -transition: opacity 0.2s;
 }
-ul li ul li { 
-  background: #fff; 
+.main-nav ul li ul li { 
+  font: bold 18px/22px "Raleway";
+  font-weight: 800;
+  background: rgba(0, 0, 0, .95); 
   display: block; 
   color: #000;
-  
   z-index: 3000;
 }
-ul li:hover ul {
+
+.main-nav ul li:hover {
+  color: rgba(255, 255, 255, 1);
+ 
+}
+
+.main-nav ul li:hover ul {
   display: block;
+  color: rgba(255, 255, 255, 1);
   opacity: 1;
   visibility: visible;
+ 
 }
 
 
 a {
-	color: #000;
+	color: rgba(255, 255, 255, 1);
 	text-decoration: none;
 }
 
 a:hover {
-	color: #666;
+	color: rgba(0, 0, 0, .75);
 }
 
 @media screen and (min-width: 0px) and (max-width: 760px) {
 
-#container {
+#Container {
   width: 100%;
 }
 
@@ -168,4 +205,7 @@ a:hover {
   width: 90%;
   margin: 0 auto;
 }
+
 }
+
+

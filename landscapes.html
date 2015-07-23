@@ -7,6 +7,8 @@
 	<link rel='stylesheet' href='libs/css/normalize.css' type='text/css' media='all' />
 	<link rel='stylesheet' href='libs/css/style.css' type='text/css' media='all' />
 	<link rel='stylesheet' href='libs/css/justifiedGallery.css' type='text/css' media='all' />
+	<link rel="stylesheet" href="libs/lightbox/css/lightbox.css" type="text/css" media="all" />
+
 	<!-- JS/JQquery -->
 	<script src='libs/js/jquery.min.js'></script>
 	<script src='libs/js/justifiedGallery.js'></script>
@@ -15,16 +17,20 @@
 			$("#randomize").justifiedGallery({ randomize : true });
 		});
 	</script>
+
+	<!-- lightbox -->
+	<script src="libs/lightbox/js/lightbox.min.js"></script>
+
 </head>
 <body>
 	
 	<header>
-		<img src="OGlogo.svg" class="logo" />
+		<img src="oldgoatlogo.png" class="logo" />
 	</header>
-		<nav>
+		<nav class="main-nav">
 			<ul>
 				<li><a href="about.html">ABOUT</a></li>
-				<li>PHOTOS
+				<li><a href="#">PHOTOS</a>
 					<ul>
 						<li><a href="nature.html">NATURE</a></li>
 						<li><a href="wildlife.html">WILDLIFE</a></li>
@@ -35,161 +41,171 @@
 				<li><a href="contact.html">CONTACT</a></li>
 			</ul>
 		</nav>
-	<div class="container">
+	
+
+		<div class="side-nav">
+		<button class="filter"><p class="caps"><a href="#">high altitude</a></p></button>
+		<button class="filter"><p class="caps"><a href="#">valley</a></p></button>
+		<button class="filter"><p class="caps"><a href="#">waterfall</a></p></button>
+		<button class="filter"><p class="caps"><a href="#">city</a></p></button>
+	</div>	
+	<div id="Container" class="container">
+		<div id="breadcrumbs">
+		</div>
 	<div id="randomize">
-		<a href="landscapes/Adirondack-Pond-01.jpg" title="Adirondack Pond">
+		<a href="landscapes/Adirondack-Pond-01.jpg" data-lightbox="landscape" data-title="Adirondack Pond" title="Adirondack Pond">
 			<img alt="Adirondack Pond" src="landscapes/Adirondack-Pond-01.jpg" />
 		</a>
 
-		<a href="landscapes/1758_Sunset_at_Oxbow_Bend.jpg" title="Sunset at Oxbow Bend">
+		<a href="landscapes/1758_Sunset_at_Oxbow_Bend.jpg" data-lightbox="landscape" data-title="Sunset at Oxbow Bend" title="Sunset at Oxbow Bend">
 			<img alt="Sunset at Oxbow Bend" src="landscapes/1758_Sunset_at_Oxbow_Bend.jpg" />
 		</a>
 
-		<a href="landscapes/Adirondack-Pond-02.jpg" title="Adirondack Pond">
+		<a href="landscapes/Adirondack-Pond-02.jpg" data-lightbox="landscape" data-title="Adirondack Pond" title="Adirondack Pond">
 			<img alt="Adirondack Pond" src="landscapes/Adirondack-Pond-02.jpg" />
 		</a>
 
-		<a href="landscapes/Adirondack-Pond-03.jpg" title="Adirondack Pond">
+		<a href="landscapes/Adirondack-Pond-03.jpg" data-lightbox="landscape" data-title="Adirondack Pond" title="Adirondack Pond">
 			<img alt="Adirondack Pond" src="landscapes/Adirondack-Pond-03.jpg" />
 		</a>
 
-		<a href="landscapes/Ahhh-Denali-Alaska.jpg" title="Denali Alaska">
+		<a href="landscapes/Ahhh-Denali-Alaska.jpg" data-lightbox="landscape" data-title="Denali Alaska" title="Denali Alaska">
 			<img alt="Denali Alaska" src="landscapes/Ahhh-Denali-Alaska.jpg" />
 		</a>
 
-		<a href="landscapes/Alpine-Lakes.jpg" title="Alpine Lakes">
+		<a href="landscapes/Alpine-Lakes.jpg" data-lightbox="landscape" data-title="Alpine Lakes" title="Alpine Lakes">
 			<img alt="Alpine Lakes" src="landscapes/Alpine-Lakes.jpg" />
 		</a>
 
-		<a href="landscapes/amphitheater-mountain.jpg" title="Amphitheater Mountain">
+		<a href="landscapes/amphitheater-mountain.jpg" data-lightbox="landscape" data-title="Amphitheatre Mountain" title="Amphitheater Mountain">
 			<img alt="Amphitheater Mountain" src="landscapes/amphitheater-mountain.jpg" />
 		</a>
 
-		<a href="landscapes/Approaching-Storm-Mt-Rainier.jpg" title="Approaching Storm Mt Rainier">
+		<a href="landscapes/Approaching-Storm-Mt-Rainier.jpg" data-lightbox="landscape" data-title="Approaching Storm Mt Rainier" title="Approaching Storm Mt Rainier">
 			<img alt="Approaching Storm Mt Rainier" src="landscapes/Approaching-Storm-Mt-Rainier.jpg" />
 		</a>
 
-		<a href="landscapes/Barn-01-Near-The-Tetons.jpg" title="Barn near the Tetons">
+		<a href="landscapes/Barn-01-Near-The-Tetons.jpg" data-lightbox="landscape" data-title="Barn near the Tetons" title="Barn near the Tetons">
 			<img alt="Barn near the Tetons" src="landscapes/Barn-01-Near-The-Tetons.jpg" />
 		</a>
 
-		<a href="landscapes/Barn-02-Near-The-Tetons.jpg" title="Barn near the Tetons">
+		<a href="landscapes/Barn-02-Near-The-Tetons.jpg" data-lightbox="landscape" data-title="Barn near the Tetons" title="Barn near the Tetons">
 			<img alt="Barn near the Tetons" src="landscapes/Barn-02-Near-The-Tetons.jpg" />
 		</a>
 
-		<a href="landscapes/Barn-3-Near-The-Tetons.jpg" title="Barn near the Tetons">
+		<a href="landscapes/Barn-3-Near-The-Tetons.jpg" data-lightbox="landscape" data-title="Barn near Tetons" title="Barn near the Tetons">
 			<img alt="Barn near the Tetons" src="landscapes/Barn-3-Near-The-Tetons.jpg" />
 		</a>
 
-		<a href="landscapes/Camp-At-Midnight-11200-ft-Denali.jpg" title="Camp at Midnight - 11200ft Denali">
+		<a href="landscapes/Camp-At-Midnight-11200-ft-Denali.jpg" data-lightbox="landscape" data-title="Camp at Midnight - 11200ft Denali" title="Camp at Midnight - 11200ft Denali">
 			<img alt="Camp at Midnight - 112000ft Denali" src="landscapes/Camp-At-Midnight-11200-ft-Denali.jpg" />
 		</a>
 
-		<a href="landscapes/Clearing-Up-On-St-Helens.jpg" title="Clearing up on St Helen's">
+		<a href="landscapes/Clearing-Up-On-St-Helens.jpg" data-lightbox="landscape" data-title="Clearing up on St Helen's" title="Clearing up on St Helen's">
 			<img alt="Clearing up on St Helen's" src="landscapes/Clearing-Up-On-St-Helens.jpg" />
 		</a>
 
-		<a href="landscapes/Crazy-Cloud-Denali.jpg" title="Crazy Cloud">
+		<a href="landscapes/Crazy-Cloud-Denali.jpg" data-lightbox="landscape" data-title="Crazy Cloud" title="Crazy Cloud">
 			<img alt="Crazy Cloud" src="landscapes/Crazy-Cloud-Denali.jpg" />
 		</a>
 
-		<a href="landscapes/Dawn-Over-Portland.jpg" title="Dawn Over Portland">
+		<a href="landscapes/Dawn-Over-Portland.jpg" data-lightbox="landscape" data-title="Dawn Over Portland" title="Dawn Over Portland">
 			<img alt="Dawn Over Portland" src="landscapes/Dawn-Over-Portland.jpg" />
 		</a>
 
-		<a href="landscapes/east_lake_fire_LG.jpg" title="East Lake Fire">
+		<a href="landscapes/east_lake_fire_LG.jpg" data-lightbox="landscape" data-title="East Lake Fire" title="East Lake Fire">
 			<img alt="East Lake Fire" src="landscapes/east_lake_fire_LG.jpg" />
 		</a>
 
-		<a href="landscapes/Grand-Canyon-of-Yellowstone.jpg" title="Grand Canyon of Yellowstone">
+		<a href="landscapes/Grand-Canyon-of-Yellowstone.jpg" data-lightbox="landscape" data-title="Grand Canyon of Yellowstone" title="Grand Canyon of Yellowstone">
 			<img alt="Grand Canyon of Yellowstone" src="landscapes/Grand-Canyon-of-Yellowstone.jpg" />
 		</a>
 
-		<a href="landscapes/High-on-Mt-Hood.jpg" title="High on Mt Hood">
+		<a href="landscapes/High-on-Mt-Hood.jpg" data-lightbox="landscape" data-title="High on Mt Hood" title="High on Mt Hood">
 			<img alt="High on Mt Hood" src="landscapes/High-on-Mt-Hood.jpg" />
 		</a>
 
-		<a href="landscapes/Illumination-Rock-on-Mt-Hood.jpg" title="Illumination Rock on Mt Hood">
+		<a href="landscapes/Illumination-Rock-on-Mt-Hood.jpg"data-lightbox="landscape" data-title="Illumination Rock on Mt Hood"  title="Illumination Rock on Mt Hood">
 			<img alt="Illumination Rock on Mt Hood" src="landscapes/Illumination-Rock-on-Mt-Hood.jpg" />
 		</a>
 
-		<a href="landscapes/lunarEclipse_2011.jpg" title="Lunar Eclipse">
+		<a href="landscapes/lunarEclipse_2011.jpg" data-lightbox="landscape" data-title="Lunar Eclipse" title="Lunar Eclipse">
 			<img alt="Lunar Eclipse" src="landscapes/lunarEclipse_2011.jpg" />
 		</a>
 
-		<a href="landscapes/Mt-Shuksan-High-Camp.jpg" title="Mt Shuksan high camp">
+		<a href="landscapes/Mt-Shuksan-High-Camp.jpg" data-lightbox="landscape" data-title="Mt Shuksan high camp" title="Mt Shuksan high camp">
 			<img alt="Mt Shuksan high camp" src="landscapes/Mt-Shuksan-High-Camp.jpg" />
 		</a>
 
-		<a href="landscapes/norris_bison_LG.jpg" title="Norris Bison">
+		<a href="landscapes/norris_bison_LG.jpg" data-lightbox="landscape" data-title="Norris Bison" title="Norris Bison">
 			<img alt="Norris Bison" src="landscapes/norris_bison_LG.jpg" />
 		</a>
 
-		<a href="landscapes/northeast-yellowstone.jpg" title="Northeast Yellowstone">
+		<a href="landscapes/northeast-yellowstone.jpg" data-lightbox="landscape" data-title="Northeast Yellowstone" title="Northeast Yellowstone">
 			<img alt="Northeast Yellowstone" src="landscapes/northeast-yellowstone.jpg" />
 		</a>
 
-		<a href="landscapes/Original-Barn-Near-The-Tetons.jpg" title="Original barn near the Tetons">
+		<a href="landscapes/Original-Barn-Near-The-Tetons.jpg" data-lightbox="landscape" data-title="Original barn near the tetons" title="Original barn near the Tetons">
 			<img alt="Original barn near the Tetons" src="landscapes/Original-Barn-Near-The-Tetons.jpg" />
 		</a>
 
-		<a href="landscapes/rainbow1_LG.jpg" title="Rainbow">
+		<a href="landscapes/rainbow1_LG.jpg" data-lightbox="landscape" data-title="Rainbow" title="Rainbow">
 			<img alt="Rainbow" src="landscapes/rainbow1_LG.jpg" />
 		</a>
 
-		<a href="landscapes/rainbow2_LG.jpg" title="Another Rainbow">
+		<a href="landscapes/rainbow2_LG.jpg" data-lightbox="landscape" data-title="Another rainbow" title="Another Rainbow">
 			<img alt="Another Rainbow" src="landscapes/rainbow2_LG.jpg" />
 		</a>
 
-		<a href="landscapes/rainbow3_LG.jpg" title="More Rainer">
+		<a href="landscapes/rainbow3_LG.jpg" data-lightbox="landscape" data-title="more rainier" title="More Rainer">
 			<img alt="More Rainbow" src="landscapes/rainbow3_LG.jpg" />
 		</a>
 
-		<a href="landscapes/reflection1.jpg" title="Reflection">
+		<a href="landscapes/reflection1.jpg" data-lightbox="landscape" data-title="reflection" title="Reflection">
 			<img alt="Reflection" src="landscapes/reflections1.jpg" />
 		</a>
 
-		<a href="landscapes/reflection2.jpg" title="More Reflection">
+		<a href="landscapes/reflection2.jpg" data-lightbox="landscape" data-title="more reflection" title="More Reflection">
 			<img alt="More Reflection" src="landscapes/reflection2.jpg" />
 		</a>
 
-		<a href="landscapes/solitude-at-42-below.jpg" title="Solitude at -42F">
+		<a href="landscapes/solitude-at-42-below.jpg" data-lightbox="landscape" data-title="solitude at -42F" title="Solitude at -42F">
 			<img alt="Solitude at -42F" src="landscapes/solitude-at-42-below.jpg" />
 		</a>
 
-		<a href="landscapes/St-Johns-Bridge.jpg" title="St Johns Bridge">
+		<a href="landscapes/St-Johns-Bridge.jpg" data-lightbox="landscape" data-title="St Johns Bridge" title="St Johns Bridge">
 			<img alt="St Johsn Bridge" src="landscapes/St-Johns-Bridge.jpg" />
 		</a>
 
-		<a href="landscapes/St-Johns-Bridge-02.jpg" title="More St John's Bridge">
+		<a href="landscapes/St-Johns-Bridge-02.jpg" data-lightbox="landscape" data-title="More St John's Bridge" title="More St John's Bridge">
 			<img alt="More St John's Bridge" src="landscapes/St-Johns-Bridge-02.jpg" />
 		</a>
 
-		<a href="landscapes/Sunrise-On-Tetons.jpg" title="Sunrise on Tetons">
+		<a href="landscapes/Sunrise-On-Tetons.jpg" data-lightbox="landscape" data-title="Sunrise on Tetons" title="Sunrise on Tetons">
 			<img alt="Sunrise on Tetons" src="landscapes/Sunrise-On-Tetons.jpg" />
 		</a>
 
-		<a href="landscapes/Sunrise-On-Tetons-02.jpg" title="More Sunrise on Tetons">
+		<a href="landscapes/Sunrise-On-Tetons-02.jpg" data-lightbox="landscape" data-title="More Sunrise on Tetons" title="More Sunrise on Tetons">
 			<img alt="More Sunrise on Tetons" src="landscapes/Sunrise-on-Tetons-02.jpg" />
 		</a>
 
-		<a href="landscapes/Sunset-From-Mt-Shuksan.jpg" title="Sunset from Mt Shuksan">
+		<a href="landscapes/Sunset-From-Mt-Shuksan.jpg" data-lightbox="landscape" data-title="Sunset from Mt Shuksan" title="Sunset from Mt Shuksan">
 			<img alt="Sunset from Mt Shuksan" src="landscapes/Sunset-From-Mt-Shuksan.jpg" />
 		</a>
 
-		<a href="landscapes/tetons_and_trees92211_LG.jpg" title="Tetons and Trees">
+		<a href="landscapes/tetons_and_trees92211_LG.jpg" data-lightbox="landscape" data-title="Tetons and Trees" title="Tetons and Trees">
 			<img alt="Tetons and Trees" src="landscapes/tetons_and_trees92211_LG.jpg" />
 		</a>
 
-		<a href="landscapes/tetons_reflection_9211_LG.jpg" title="Tetons reflection">
+		<a href="landscapes/tetons_reflection_9211_LG.jpg" data-lightbox="landscape" data-title="Tetons reflection" title="Tetons reflection">
 			<img alt="Tetons reflection" src="landscapes/teton_reflection_9211_LG.jpg" />
 		</a>
 
-		<a href="landscapes/waterfall1_LG.jpg" title="Waterfall">
+		<a href="landscapes/waterfall1_LG.jpg" data-lightbox="landscape" data-title="Waterfall" title="Waterfall">
 			<img alt="Waterfall" src="landscapes/waterfall1_LG.jpg" />
 		</a>
 
-		<a href="landscapes/Windy-Day-At-Illumination-Saddle.jpg" title="Windy day at Illumination Saddle">
+		<a href="landscapes/Windy-Day-At-Illumination-Saddle.jpg" data-lightbox="landscape" data-title="Windy day at Illumination Saddle" title="Windy day at Illumination Saddle">
 			<img alt="Windy day at Illumination Saddle" src="landscapes/Windy-Day-At-Illumination-Saddle.jpg" />
 		</a>
 

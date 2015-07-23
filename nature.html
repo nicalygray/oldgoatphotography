@@ -1,4 +1,4 @@
- <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<title>Nature : Old Goat Photography</title>
@@ -9,28 +9,43 @@
 	<meta name="author" content="">
 	<meta name="reply-to" content="">
 	<meta charset="utf=8" lang="en">
+
+
 	<!-- CSS Stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:800,400|Lusitana' rel='stylesheet' type='text/css'>
 	<link rel='stylesheet' href='libs/css/normalize.css' type='text/css' media='all' />
 	<link rel='stylesheet' href='libs/css/style.css' type='text/css' media='all' />
 	<link rel='stylesheet' href='libs/css/justifiedGallery.css' type='text/css' media='all' />
+	<link rel="stylesheet" href="libs/lightbox/css/lightbox.css" type="text/css" media="all" />
+
+
 	<!-- JS/JQquery -->
-	<script src='libs/js/jquery.min.js'></script>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+	<script src="libs/js/main.js"></script>
 	<script src='libs/js/justifiedGallery.js'></script>
+	
 	<script>
 		$(document).ready(function () {
 			$("#randomize").justifiedGallery({ randomize : true });
 		});
+		
 	</script>
+
+
+	<!-- lightbox -->
+	<script src="libs/lightbox/js/lightbox.min.js"></script>
 
 </head>
 <body>
 	<header>
-		<img src="OGlogo.svg" class="logo" />
+		<img src="oldgoatlogo.png" class="logo" />
 	</header>	
-		<nav>
+		<nav class="main-nav">
 			<ul>
 				<li><a href="about.html">ABOUT</a></li>
-				<li>PHOTOS
+				<li><a href="#">PHOTOS</a>
 					<ul>
 						<li><a href="nature.html">NATURE</a></li>
 						<li><a href="wildlife.html">WILDLIFE</a></li>
@@ -41,90 +56,90 @@
 				<li><a href="contact.html">CONTACT</a></li>
 			</ul>
 		</nav>
+
+	<div class="side-nav">
+		<button class="filter"><p class="caps">all</p></button>
+		<button class="filter"><p class="caps">flowers</p></button>
+		<button class="filter"><p class="caps">trees</p></button>
+		<button class="filter"><p class="caps">winter</p></button>
+	</div>	
 	
-	<div class="container">
-	<div id="randomize">
-		<a href="nature/Alpine-Flowers.jpg" title="Alpine Flowers">
-			<img alt="Alpine Flowers" src="nature/Alpine-Flowers.jpg" />
-		</a>
+	<div id="Container" class="container">
+		<div id="breadcrumbs">
+		</div>
+		<div id="randomize">
+			<a href="nature/Alpine-Flowers.jpg" data-lightbox="nature" data-title="Alpine Flowers" title="Alpine Flowers">
+				<img alt="Alpine Flowers" src="nature/Alpine-Flowers.jpg"/>
+			</a>
 
-		<a href="nature/Another-Carry-Denali-Alaska.jpg" title="Another Carry Denali">
-			<img alt="Another Carry Denali" src="nature/Another-Carry-Denali-Alaska.jpg" />
-		</a>
+			<a href="nature/Another-Carry-Denali-Alaska.jpg" data-lightbox="nature" data-title="Another Carry Denali" title="Another Carry Denali">
+				<img alt="Another Carry Denali" src="nature/Another-Carry-Denali-Alaska.jpg"/>
+			</a>
 
-		<a href="nature/aspens_LG.jpg" title="Aspens">
-			<img alt="Aspens" src="nature/aspens_LG.jpg" />
-		</a>
+			<a href="nature/aspens_LG.jpg" data-lightbox="nature" data-title="Aspens" title="Aspens">
+				<img alt="Aspens" src="nature/aspens_LG.jpg"/>
+			</a>
 
-		<a href="nature/backlit-tree.jpg" title="Backlit Tree"><img alt="Backlit Tree" src="nature/backlit-tree.jpg" />
-		</a>
+			<a href="nature/backlit-tree.jpg" data-lightbox="nature" data-title="Backlit Tree" title="Backlit Tree"><img alt="Backlit Tree" src="nature/backlit-tree.jpg" />
+			</a>
 
-		<a href="nature/Barn-Siding_Wyoming.jpg" title="Barn Siding Wyoming">
-			<img alt="Barn Siding Wyoming" src="nature/Barn-Siding-Wyoming.jpg" />
-		</a>
+			<a href="nature/Barn-Siding_Wyoming.jpg" data-lightbox="nature" data-title="Barn Siding Wyoming" title="Barn Siding Wyoming">
+				<img alt="Barn Siding Wyoming" src="nature/Barn-Siding-Wyoming.jpg"/>
+			</a>
 
-		<a href="nature/Base-Camp-Denali-Alaska.jpg" title="Base Camp Denali">
-			<img alt="Base Camp Denali" src="nature/Base-Camp-Denali-Alaska.jpg" />
-		</a>
+			<a href="nature/Base-Camp-Denali-Alaska.jpg" data-lightbox="nature" data-title="Base Camp Denali" title="Base Camp Denali">
+				<img alt="Base Camp Denali" src="nature/Base-Camp-Denali-Alaska.jpg"/>
+			</a>
 
-		<a href="nature/Bennett-Pass.jpg" title="Bennet Pass">
-			<img alt="Bennet Pass" src="nature/Bennett-Pass.jpg" />
-		</a>
+			<a href="nature/Bennett-Pass.jpg" data-lightbox="nature" data-title="Bennet Pass" title="Bennet Pass">
+				<img alt="Bennet Pass" src="nature/Bennett-Pass.jpg"/>
+			</a>
 
-		<a href="nature/butterfly_LG.jpg" title="Butterfly">
-			<img alt="Butterfly" src="nature/butterfly_LG.jpg" />
-		</a>
+			<a href="nature/butterfly_LG.jpg" data-lightbox="nature" data-title="Butterfly" title="Butterfly">
+				<img alt="Butterfly" src="nature/butterfly_LG.jpg"/>
+			</a>
 
-		<a href="nature/Cascade_Waterfall.jpg" title="Cascade Waterfall">
-			<img alt="Cascade Waterfall" src="nature/Cascade_Waterfall.jpg" />
-		</a>
+			<a href="nature/Cascade_Waterfall.jpg" data-lightbox="nature" data-title="Cascade Waterfall" title="Cascade Waterfall">
+				<img alt="Cascade Waterfall" src="nature/Cascade_Waterfall.jpg"/>
+			</a>
 
-		<a href="nature/xmasmorning.jpg" title="Christmas Morning at Bennett Pass">
-			<img alt="Christmas Morning at Bennett Pass" src="nature/xmasmorning.jpg" />
-		</a>
+			<a href="nature/xmasmorning.jpg" data-lightbox="nature" data-title="Christmas Morning at Bennet Pass" title="Christmas Morning at Bennett Pass">
+				<img alt="Christmas Morning at Bennett Pass" src="nature/xmasmorning.jpg"/>
+			</a>
 
-		<a href="nature/Clematis-Blossom.jpg" title="Clematis Blossom">
-			<img alt="Clematis Blossom" src="nature/Clematis-Blossom.jpg" />
-		</a>
+			<a href="nature/Clematis-Blossom.jpg" data-lightbox="nature" data-title="Clematis Blossom" title="Clematis Blossom">
+				<img alt="Clematis Blossom" src="nature/Clematis-Blossom.jpg"/>
+			</a>
 
-		<a href="nature/Clematis-Leaf-Dew-Drop.jpg" title="Clematis Leaf with Dew Drop">
-			<img alt="Clematis Leaf with Dew Drop" src="nature/Clematis-Leaf-Dew-Drop.jpg" />
-		</a>
+			<a href="nature/Clematis-Leaf-Dew-Drop.jpg" data-lightbox="nature" data-title="Clematis Leaf with Dew Drop" title="Clematis Leaf with Dew Drop">
+				<img alt="Clematis Leaf with Dew Drop" src="nature/Clematis-Leaf-Dew-Drop.jpg"/>
+			</a>
 
-		<a href="nature/Friends-On-Mt-St-Helens.jpg" title="Friends on Mt. St Helen's">
-			<img alt="Friends on Mt. St Helen's" src="nature/Friends-On-Mt-St-Helens.jpg" />
-		</a>
+			<a href="nature/Friends-On-Mt-St-Helens.jpg" data-lightbox="nature" data-title="Friends on Mt. St Heln's" title="Friends on Mt. St Helen's">
+				<img alt="Friends on Mt. St Helen's" src="nature/Friends-On-Mt-St-Helens.jpg"/>
+			</a>
 
-		<a href="nature/frozen-cottonwood.jpg" title="Frozen Cottonwood">
-			<img alt="Frozen Cottonwood" src="nature/frozen-cottonwood.jpg" />
-		</a>
-		<a href="nature/frozen-trees.jpg" title="frozen trees">
-			<img alt="frozen trees" src="nature/frozen-trees.jpg" />
-		</a>
+			<a href="nature/frozen-cottonwood.jpg" data-lightbox="nature" data-title="Froen Cottonwood" title="Frozen Cottonwood">
+				<img alt="Frozen Cottonwood" src="nature/frozen-cottonwood.jpg"/>
+			</a>
 
-		<a href="nature/Hot-Rocks-1.jpg" title="Hot Rocks">
-			<img alt="Hot Rocks" src="nature/Hot-Rocks-1.jpg" />
-		</a>
+			<a href="nature/frozen-trees.jpg" data-lightbox="nature" data-title="frozen trees" title="frozen trees">
+				<img alt="frozen trees" src="nature/frozen-trees.jpg"/>
+			</a>
 
-		<a href="nature/Hot-Rocks-2.jpg" title="Hot Rocks 2">
-			<img alt="Hot Rocks 2" src="nature/Hot-Rocks-2.jpg" />
-		</a>	
-	</div>
+			<a href="nature/Hot-Rocks-1.jpg" data-lightbox="nature" data-title="Hot Rocks" title="Hot Rocks">
+				<img alt="Hot Rocks" src="nature/Hot-Rocks-1.jpg"/>
+			</a>
+
+			<a href="nature/Hot-Rocks-2.jpg" data-lightbox="nature" data-title="Hot Rocks 2" title="Hot Rocks 2">
+				<img alt="Hot Rocks 2" src="nature/Hot-Rocks-2.jpg"/>
+			</a>	
+		</div>
 	</div>
 	<footer>
-		<p class="copyright">Copyright Old Goat Photography 2015</p>
-		<p class="footer-nav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="photos.html">Photos</a></li>
-				<li><a href="prints.html">Prints</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-
-
-		</p>
-		<p class="site">website by <a href="http://nicaly.com" target="_blank" title="Nicaly Design">Nicaly Design</a></p>
+		<p class="copyright"><small>Copyright Old Goat Photography 2015</small></p>
+		
+		<p class="site"><small>website by <a href="http://nicaly.com" target="_blank" title="Nicaly Design">Nicaly Design</a></small></p>
 	</footer>
 </body>
 </HTML>
